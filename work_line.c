@@ -6,10 +6,11 @@ int new_n;
  * @args: working arguments
  * @stack: working stack
  * @line_number: working line number
+ * @cm2: var
  * Return: nothing
  */
 
-void work_line(char **args, stack_t **stack, int line_number)
+void work_line(char *args, stack_t **stack, int line_number, char *cm2)
 {
 	instruction_t instructions[] = {
 		{"push", _push},
@@ -25,10 +26,10 @@ void work_line(char **args, stack_t **stack, int line_number)
 
 	for (i = 0; instructions[i].opcode != NULL; i++)
 	{
-		if ((strcmp(instructions[i].opcode, args[0])) == 0)
+		if ((strcmp(instructions[i].opcode, args)) == 0)
 		{
-			if (strcmp(args[0], "push") == 0)
-				new_n = atoi(args[1]);
+			if (strcmp(args, "push") == 0)
+				new_n = atoi(cm2);
 			instructions[i].f(stack, line_number);
 			break;
 		}

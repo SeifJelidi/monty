@@ -44,4 +44,6 @@ void _pint(stack_t **stack, unsigned int line_number);
 void _swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void _nop(stack_t **stack, unsigned int line_number);
+int _strlen(char *s);
+char *_strcpy(char *dest, char *src);
 #endif

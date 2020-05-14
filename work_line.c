@@ -22,13 +22,13 @@ void work_line(char **args, stack_t **stack, int line_number)
 	};
 	int i;
 
-	for (i = 0; instructions[j].opcode != NULL; j++)
+	for (i = 0; instructions[i].opcode != NULL; i++)
 	{
-		if ((strcmp(instructions[j].opcode, args[0])) == NULL)
+		if ((strcmp(instructions[i].opcode, args[0])) == 0)
 		{
-			if (strcmp(args[0], "push") == NULL)
+			if (strcmp(args[0], "push") == 0)
 				new_n = atoi(args[1]);
-			instructions[j].f(stack, line_number);
+			instructions[i].f(stack, line_number);
 			break;
 		}
 	}

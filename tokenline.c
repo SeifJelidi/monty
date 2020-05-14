@@ -37,3 +37,41 @@ char **tokenline(char *line)
 	tokens[k] = NULL;
 	return (tokens);
 }
+
+/**
+ * _strlen - give the lenght of a string
+ *@s: int pointer type variable
+ * Return: Always 0.
+ */
+int _strlen(char *s)
+{
+	int c = 0;
+
+	while (s[c] != '\0')
+	{
+		c++;
+	}
+	return (c);
+
+}
+
+/**
+ * _strcpy - copies the string pointed to by src
+ * @dest: char type array pointer
+ * @src: char type integer variable
+ * Return: dest
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int i = 0;
+
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+

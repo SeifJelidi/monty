@@ -12,7 +12,7 @@ void handle_monty(char *filename, stack_t **stack)
 	FILE *monty = fopen(filename, "r");
 	unsigned int line_number = 0;
 	char *buffer;
-	size_t bufsize = 32;
+	size_t bufsize = 0;
 	char **args = NULL;
 
 	if (monty == NULL)

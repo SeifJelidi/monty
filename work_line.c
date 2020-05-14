@@ -1,4 +1,5 @@
 #include "monty.h"
+int new_n;
 /**
  * work_line - executes opcodes
  * Description: executes opcodes

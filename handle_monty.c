@@ -25,8 +25,8 @@ void handle_monty(char *filename)
 	buffer = (char *)malloc(bufsize * sizeof(char));
 	if (buffer == NULL)
 	{
-		perror("Unable to allocate buffer");
-		exit(1);
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
 	}
 	while (getline(&buffer, &bufsize, monty) != -1)
 	{

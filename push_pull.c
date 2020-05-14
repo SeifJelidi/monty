@@ -1,5 +1,4 @@
 #include "monty.h"
-int new_n;
 /**
  * _push - pushes an element to the stack
  * Description: pushes an element to the stack
